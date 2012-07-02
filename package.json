@@ -10,6 +10,13 @@
     "engines": {
         "node": ">=0.4.0"
     },
+    "browser": {
+        "include": [
+            "README.md",
+            "LICENSE.BSD",
+            "esprima.js"
+        ]
+    },
     "maintainers": [{
         "name": "Ariya Hidayat",
         "email": "ariya.hidayat@gmail.com",
