@@ -40,7 +40,19 @@ parseStatement: true, parseSourceElement: true, parseModuleBlock: true, parseCon
 parseYieldExpression: true
 */
 
-(function (exports) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['exports'], factory);
+    } else if (typeof exports !== 'undefined') {
+        // Node/CommonJS
+        factory(exports);
+    } else {
+        // Browser globals
+        factory((esprima = {}));
+    }
+}(function (exports) {
     'use strict';
 
     var Token,
@@ -4224,5 +4236,5 @@ parseYieldExpression: true
         return types;
     }());
 
-}(typeof exports === 'undefined' ? (esprima = {}) : exports));
+}));
 /* vim: set sw=4 ts=4 et tw=80 : */

@@ -1,8 +1,15 @@
 {
-    "name": "esprima",
+    "name": "esprima-harmony",
     "description": "ECMAScript parsing infrastructure for multipurpose analysis",
     "homepage": "http://esprima.org",
     "main": "esprima.js",
+    "browser": {
+        "include": [
+            "README.md",
+            "LICENSE.BSD",
+            "esprima.js"
+        ]
+    },
     "bin": {
         "esparse": "./bin/esparse.js"
     },
